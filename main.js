@@ -14,7 +14,7 @@
 	let taskCounter = 0;	
 	let deleteCounter = 0;	
 	let workingBtnCounter = 0;	
-	let arrayIndex=0;
+	let arrayIndex = 0;
 	
 	function taskDisplay(){
 
@@ -40,7 +40,7 @@
 
 	function checkWorkingCondition(){
 
-		workingBtnCounter= arrayIndex-1;
+		workingBtnCounter = arrayIndex - 1;
 		const isWorkingBtnClass = document.getElementsByClassName("isWorkingBtnClass");
 
 		isWorkingBtnClass[workingBtnCounter].addEventListener("click", function changeWorkingCondition(){
@@ -63,16 +63,16 @@
 	
 	function deleteEventRegister(){		
 
-		deleteCounter= arrayIndex-1;
+		deleteCounter= arrayIndex - 1;
 		const deleteBtnClass = document.getElementsByClassName("deleteBtnClass");		
 
 		deleteBtnClass[deleteCounter].addEventListener("click", function deleteBtn(){
 
 			let deleteNum = Number( this.parentElement.parentElement.firstElementChild.textContent );
 			
-			for(let loopCounter=deleteNum+1; loopCounter<toDoList.length; loopCounter++){
+			for(let loopCounter = deleteNum + 1; loopCounter < toDoList.length; loopCounter++){
 
-				toDoList[loopCounter].index = toDoList[loopCounter].index-1;
+				toDoList[loopCounter].index = toDoList[loopCounter].index - 1;
 
 			}		
 
@@ -82,10 +82,10 @@
 			let deleteTableRow = this.parentElement.parentElement;
 			let next = deleteTableRow.nextElementSibling;
 
-			for(let loopCounter=deleteNum+1; loopCounter<=toDoList.length; loopCounter++){
+			for(let loopCounter = deleteNum + 1; loopCounter <= toDoList.length; loopCounter++){
 
-				next.firstElementChild.textContent = loopCounter-1;
-				next=next.nextElementSibling;
+				next.firstElementChild.textContent = loopCounter - 1;
+				next = next.nextElementSibling;
 
 			}
 
@@ -107,7 +107,7 @@
 	
 	taskWorking.addEventListener("click", function toDoCreate(){
 
-		for(let loopCounter=0; loopCounter<toDoList.length; loopCounter++){
+		for(let loopCounter = 0; loopCounter < toDoList.length; loopCounter++){
 
 			if( !toDoList[loopCounter].isWorking ) {				
 
@@ -124,7 +124,7 @@
 
 	taskFinished.addEventListener("click", function toDoCreate(){
 
-		for(let loopCounter=0; loopCounter<toDoList.length; loopCounter++){
+		for(let loopCounter = 0; loopCounter < toDoList.length; loopCounter++){
 
 			if( toDoList[loopCounter].isWorking ) {				
 
@@ -139,7 +139,7 @@
 
 	taskAll.addEventListener("click", function toDoCreate(){
 
-		for(let loopCounter=0; loopCounter<toDoList.length; loopCounter++){
+		for(let loopCounter = 0; loopCounter < toDoList.length; loopCounter++){
 
 			if( toDoListTbody.children[loopCounter].style.display === "none" ) {
 				
