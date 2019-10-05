@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ToDoリスト</title>  
+</head>
+<body>
+	<h1>ToDoリスト</h1>
+	<p>
+		<input type="radio" name="taskSelection" id="taskAll" checked>すべて
+		<input type="radio" name="taskSelection" id="taskWorking">作業中
+		<input type="radio" name="taskSelection" id="taskFinished">完了
+	</p>
+	<table border="1" id="toDoListTable">
+		<thead>
+			<tr><th>ID</th><th>コメント</th><th colspan="2">状態</th></tr>
+		</thead>
+		<tbody id="toDoListTbody">
+		</tbody>		
+	</table>	
+	<h2>新規タスクの追加</h2>
+	<input type="text" id="newTask">
+	<input type="button" id="addBtn" value="追加">
+
+	<script src="main.js"></script>
+</body>
+</html>
